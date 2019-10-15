@@ -4,7 +4,7 @@ const SvgSprite = () => {
   return (
     <div className="visually-hidden">
       <svg xmlns="http://www.w3.org/2000/svg">
-        <symbol viewBox="0 0 19 20">
+        <symbol id="add" viewBox="0 0 19 20">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <polygon
               id="+"
