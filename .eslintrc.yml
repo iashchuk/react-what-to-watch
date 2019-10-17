@@ -6,7 +6,15 @@ env:
   commonjs: true
   node: true
 
-extends: ["htmlacademy/es6", "plugin:react/recommended"]
+extends:
+  [
+    "htmlacademy/es6",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+  ]
+
+parser: babel-eslint
 
 parserOptions:
   ecmaFeatures:
@@ -14,7 +22,7 @@ parserOptions:
   ecmaVersion: 6
   sourceType: module
 
-plugins: ["react"]
+plugins: ["react", "import"]
 
 settings:
   react:
@@ -23,3 +31,7 @@ settings:
 
 globals:
   process: true
+
+rules:
+  object-curly-spacing:
+    [1, "always", { "arraysInObjects": false, "objectsInObjects": false }]
