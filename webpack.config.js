@@ -6,6 +6,13 @@ module.exports = {
     filename: `bundle.js`,
     path: path.join(__dirname, `public`)
   },
+  resolve: {
+    extensions: [`.js`, `.jsx`],
+
+    alias: {
+      "@helpers": path.resolve(__dirname, `src/helpers`)
+    }
+  },
   devServer: {
     contentBase: path.join(__dirname, `public`),
     compress: false,
@@ -17,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: `babel-loader`
