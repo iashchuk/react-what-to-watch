@@ -1,3 +1,4 @@
 module.exports = {
-  presets: [`@babel/preset-react`]
+  presets: [`@babel/preset-react`, `@babel/preset-env`],
+  plugins: [`@babel/plugin-proposal-object-rest-spread`]
 };
