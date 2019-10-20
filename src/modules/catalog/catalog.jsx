@@ -19,6 +19,7 @@ const Catalog = () => {
             className="catalog__movies-card"
             title={item.title}
             imageSrc={item.imageSrc}
+            onClick={(f) => f}
           />
         ))}
       </div>

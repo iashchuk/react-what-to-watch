@@ -353,6 +353,7 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -377,6 +378,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -401,6 +403,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -425,6 +428,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -449,6 +453,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -473,6 +478,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -497,6 +503,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -521,6 +528,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -545,6 +553,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -569,6 +578,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -593,6 +603,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
@@ -617,6 +628,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
         >
           <div
             className="small-movie-card__image"
