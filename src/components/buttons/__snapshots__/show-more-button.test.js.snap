@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowMoreButton renders correctly 1`] = `
+<button
+  className="btn catalog__button"
+  type="button"
+>
+  Show more
+</button>
+`;
+
+exports[`ShowMoreButton renders correctly with additional class 1`] = `
+<button
+  className="btn catalog__button section__button"
+  type="button"
+>
+  Show more
+</button>
+`;

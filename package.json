@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server",
     "eslint": "eslint --ext .jsx --ext .js src/",
-    "test": "npm run eslint"
+    "test": "npm run eslint && jest"
   },
   "devDependencies": {
     "@babel/core": "7.6.4",
@@ -15,15 +15,20 @@
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
     "babel-eslint": "10.0.3",
+    "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
     "classnames": "2.2.6",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.15.1",
     "eslint": "5.13.0",
     "eslint-config-htmlacademy": "0.5.2",
     "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-babel": "5.3.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-react": "7.16.0",
+    "jest": "24.9.0",
     "prop-types": "15.7.2",
+    "react-test-renderer": "16.10.2",
     "webpack": "4.41.1",
     "webpack-cli": "3.3.9",
     "webpack-dev-server": "3.8.2"

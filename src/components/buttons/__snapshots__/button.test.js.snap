@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<button
+  className="btn"
+  type="button"
+>
+  Нажми меня
+</button>
+`;
+
+exports[`Button renders correctly with additional class 1`] = `
+<button
+  className="btn section__button"
+  type="button"
+>
+  Нажми меня
+</button>
+`;
