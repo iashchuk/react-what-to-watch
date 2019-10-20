@@ -12,7 +12,7 @@ const Button = ({ className, children }) => {
 
 Button.propTypes = {
   className: string,
-  children: node.isRequired
+  children: node
 };
 
 export default Button;

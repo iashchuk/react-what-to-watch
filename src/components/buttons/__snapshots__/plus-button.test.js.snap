@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlusButton renders correctly 1`] = `
+<button
+  className="btn btn--list"
+  type="button"
+>
+  <svg
+    height="20"
+    viewBox="0 0 19 20"
+    width="19"
+  >
+    <use
+      xlinkHref="#add"
+    />
+  </svg>
+  <span>
+    My list
+  </span>
+</button>
+`;
+
+exports[`PlusButton renders correctly with additional class 1`] = `
+<button
+  className="btn btn--list section__button"
+  type="button"
+>
+  <svg
+    height="20"
+    viewBox="0 0 19 20"
+    width="19"
+  >
+    <use
+      xlinkHref="#add"
+    />
+  </svg>
+  <span>
+    My list
+  </span>
+</button>
+`;
