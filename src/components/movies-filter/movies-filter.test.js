@@ -4,7 +4,9 @@ import MoviesFilter from "./movies-filter.jsx";
 
 describe(`MoviesFilter`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<MoviesFilter />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <MoviesFilter />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

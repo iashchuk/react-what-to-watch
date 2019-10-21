@@ -4,7 +4,9 @@ import MainPage from "./main-page.jsx";
 
 describe(`MainPage`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<MainPage />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <MainPage />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

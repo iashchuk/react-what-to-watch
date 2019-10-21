@@ -4,13 +4,16 @@ import PlayButton from "./play-button.jsx";
 
 describe(`PlayButton`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<PlayButton />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <PlayButton />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
+
   it(`renders correctly with additional class`, () => {
-    const component = renderer
-      .create(<PlayButton className="section__button" />)
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <PlayButton className="section__button" />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

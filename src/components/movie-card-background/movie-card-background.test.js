@@ -4,7 +4,9 @@ import MovieCardBackground from "./movie-card-background.jsx";
 
 describe(`MovieCardBackground`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<MovieCardBackground />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <MovieCardBackground />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

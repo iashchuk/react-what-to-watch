@@ -4,7 +4,9 @@ import Catalog from "./catalog.jsx";
 
 describe(`Catalog`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<Catalog />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <Catalog />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

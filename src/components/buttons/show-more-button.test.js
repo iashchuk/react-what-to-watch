@@ -4,13 +4,16 @@ import ShowMoreButton from "./show-more-button.jsx";
 
 describe(`ShowMoreButton`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<ShowMoreButton />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <ShowMoreButton />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
+
   it(`renders correctly with additional class`, () => {
-    const component = renderer
-      .create(<ShowMoreButton className="section__button" />)
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <ShowMoreButton className="section__button" />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

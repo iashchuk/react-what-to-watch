@@ -4,7 +4,9 @@ import Header from "./header.jsx";
 
 describe(`Header`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<Header />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <Header />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

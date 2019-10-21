@@ -4,7 +4,9 @@ import Poster from "./poster.jsx";
 
 describe(`Poster`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<Poster />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <Poster />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

@@ -4,7 +4,9 @@ import Intro from "./intro.jsx";
 
 describe(`Intro`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<Intro />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <Intro />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

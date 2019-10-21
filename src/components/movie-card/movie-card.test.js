@@ -10,21 +10,24 @@ const cardData = {
 
 describe(`MovieCard`, () => {
   it(`renders correctly`, () => {
-    const component = renderer
-      .create(<MovieCard title={cardData.title} imageSrc={cardData.imageSrc} />)
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <MovieCard title={cardData.title} imageSrc={cardData.imageSrc} />;
+
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
+
   it(`renders correctly with added class`, () => {
-    const component = renderer
-      .create(
-          <MovieCard
-            className="catalog__card"
-            title={cardData.title}
-            imageSrc={cardData.imageSrc}
-          />
-      )
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = (
+      <MovieCard
+        className="catalog__card"
+        title={cardData.title}
+        imageSrc={cardData.imageSrc}
+      />
+    );
+
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
