@@ -4,13 +4,16 @@ import PlusButton from "./plus-button.jsx";
 
 describe(`PlusButton`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<PlusButton />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <PlusButton />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
+
   it(`renders correctly with additional class`, () => {
-    const component = renderer
-      .create(<PlusButton className="section__button" />)
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <PlusButton className="section__button" />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

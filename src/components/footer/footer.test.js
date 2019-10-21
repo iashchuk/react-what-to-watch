@@ -4,7 +4,9 @@ import Footer from "./footer.jsx";
 
 describe(`Footer`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<Footer />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <Footer />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

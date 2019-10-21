@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
+import Enzyme, { mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import MovieCard from "./movie-card.jsx";
 
@@ -16,11 +16,13 @@ describe(`MovieCard`, () => {
     const CARD_CLASSNAME = `.small-movie-card`;
     const onClick = jest.fn();
 
-    const component = shallow(
-        <MovieCard title={cardData.title} imageSrc={cardData.imageSrc} onClick={onClick} />
+    const dom = (
+      <MovieCard title={cardData.title} imageSrc={cardData.imageSrc} onClick={onClick} />
     );
 
+    const component = mount(dom);
     expect(component.find(CARD_CLASSNAME)).toHaveLength(1);
+
     component.simulate(`click`);
     expect(onClick).toHaveBeenCalledTimes(1);
   });

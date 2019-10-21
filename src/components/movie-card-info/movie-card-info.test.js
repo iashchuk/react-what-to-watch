@@ -4,7 +4,9 @@ import MovieCardInfo from "./movie-card-info.jsx";
 
 describe(`MovieCardInfo`, () => {
   it(`renders correctly`, () => {
-    const component = renderer.create(<MovieCardInfo />).toJSON();
-    expect(component).toMatchSnapshot();
+    const dom = <MovieCardInfo />;
+    const component = renderer.create(dom);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
