@@ -10,7 +10,6 @@ const ReviewItem = ({ className, text, author, date, rating }) => {
     <div className={cx(`review`, className)}>
       <blockquote className="review__quote">
         <p className="review__text">{text}</p>
-
         <footer className="review__details">
           <cite className="review__author">{author}</cite>
           <time className="review__date" dateTime={dateTime}>
