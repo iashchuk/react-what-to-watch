@@ -1,4 +1,6 @@
 import React from "react";
+import { bool } from "prop-types";
+
 import cx from "classnames";
 
 const Poster = ({ big }) => {
@@ -16,6 +18,10 @@ const Poster = ({ big }) => {
 
 Poster.defaultProps = {
   big: false
+};
+
+Poster.propTypes = {
+  big: bool
 };
 
 export default Poster;

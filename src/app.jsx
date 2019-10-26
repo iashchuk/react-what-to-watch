@@ -1,7 +1,16 @@
-import React from "react";
+import React, { createContext } from "react";
 
 import MainPage from "./pages/main-page/main-page";
 import DetailsPage from "./pages/details-page/details-page";
+
+import { data } from "../src/api/mocks";
+
+
+export const Context = createContext();
+
+export const options = {
+  data
+};
 
 const getPage = () => {
   switch (location.pathname) {
@@ -13,7 +22,7 @@ const getPage = () => {
 };
 
 const App = () => {
-  return getPage();
+  return <Context.Provider value={options}>{getPage()}</Context.Provider>;
 };
 
 export default App;

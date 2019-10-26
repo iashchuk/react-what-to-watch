@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import MovieCardBackground from "./movie-card-background.jsx";
+import CardManage from "./card-manage";
 
-describe(`MovieCardBackground`, () => {
+describe(`CardManage`, () => {
   it(`renders correctly`, () => {
-    const dom = <MovieCardBackground />;
+    const dom = <CardManage />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

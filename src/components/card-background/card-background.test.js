@@ -1,15 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Context, options } from "../../app";
-import Catalog from "./catalog.jsx";
+import CardBackground from "./card-background";
 
-describe(`Catalog`, () => {
+describe(`CardBackground`, () => {
   it(`renders correctly`, () => {
-    const dom = (
-      <Context.Provider value={options}>
-        <Catalog />
-      </Context.Provider>
-    );
+    const dom = <CardBackground />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

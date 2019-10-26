@@ -1,13 +1,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { Context, options } from "../../app";
-import Catalog from "./catalog.jsx";
+import DetailsPage from "./details-page.jsx";
 
-describe(`Catalog`, () => {
+describe(`DetailsPage`, () => {
   it(`renders correctly`, () => {
     const dom = (
       <Context.Provider value={options}>
-        <Catalog />
+        <DetailsPage />
       </Context.Provider>
     );
     const component = renderer.create(dom);
