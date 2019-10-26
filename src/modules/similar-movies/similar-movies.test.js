@@ -1,13 +1,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { Context, options } from "../../app";
-import Catalog from "./catalog.jsx";
+import SimilarMovies from "./similar-movies.jsx";
 
-describe(`Catalog`, () => {
+describe(`SimilarMovies`, () => {
   it(`renders correctly`, () => {
     const dom = (
       <Context.Provider value={options}>
-        <Catalog />
+        <SimilarMovies />
       </Context.Provider>
     );
     const component = renderer.create(dom);

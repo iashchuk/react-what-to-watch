@@ -1,15 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Context, options } from "../../app";
-import Catalog from "./catalog.jsx";
+import Details from "./details";
 
-describe(`Catalog`, () => {
+describe(`Details`, () => {
   it(`renders correctly`, () => {
-    const dom = (
-      <Context.Provider value={options}>
-        <Catalog />
-      </Context.Provider>
-    );
+    const dom = <Details />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
