@@ -1,17 +1,17 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import PlayButton from "./play-button.jsx";
+import ShowMoreButton from "./show-more-button";
 
-describe(`PlayButton`, () => {
+describe(`ShowMoreButton`, () => {
   it(`renders correctly`, () => {
-    const dom = <PlayButton />;
+    const dom = <ShowMoreButton />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it(`renders correctly with additional class`, () => {
-    const dom = <PlayButton className="section__button" />;
+    const dom = <ShowMoreButton className="section__button" />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

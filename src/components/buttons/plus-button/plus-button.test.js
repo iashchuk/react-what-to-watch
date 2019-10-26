@@ -1,17 +1,17 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import ShowMoreButton from "./show-more-button.jsx";
+import PlusButton from "./plus-button";
 
-describe(`ShowMoreButton`, () => {
+describe(`PlusButton`, () => {
   it(`renders correctly`, () => {
-    const dom = <ShowMoreButton />;
+    const dom = <PlusButton />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it(`renders correctly with additional class`, () => {
-    const dom = <ShowMoreButton className="section__button" />;
+    const dom = <PlusButton className="section__button" />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
