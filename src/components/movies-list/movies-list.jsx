@@ -12,7 +12,8 @@ const MoviesList = ({ movies }) => {
             key={item.id}
             className="catalog__movies-card"
             title={item.title}
-            imageSrc={item.imageSrc}
+            poster={item.poster}
+            trailer={item.trailer}
             onClick={(f) => f}
           />
         ))}
@@ -25,7 +26,8 @@ MoviesList.propTypes = {
   movies: arrayOf(
       shape({
         title: string.isRequired,
-        imageSrc: string.isRequired
+        poster: string.isRequired,
+        trailer: string.isRequired
       })
   )
 };
