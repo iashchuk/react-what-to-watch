@@ -4,7 +4,7 @@ import cx from "classnames";
 
 import VideoPlayer from "../../video-player/video-player";
 
-const MovieCard = ({ className, title, poster, trailer }) => {
+const MovieCard = ({ className, title, poster, trailer, onClick }) => {
   const [isPlaying, setPlaying] = useState(false);
 
   let timerId;
@@ -29,6 +29,7 @@ const MovieCard = ({ className, title, poster, trailer }) => {
       className={cx(`small-movie-card`, className)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       <div className="small-movie-card__image">
         <VideoPlayer

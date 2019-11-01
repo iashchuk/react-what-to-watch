@@ -10,15 +10,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Fantastic Beasts: The Crimes of Grindelwald"
-          height="175"
-          src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -35,15 +38,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Bohemian Rhapsody"
-          height="175"
-          src="img/bohemian-rhapsody.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/bohemian-rhapsody.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -60,15 +66,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Macbeth"
-          height="175"
-          src="img/macbeth.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/macbeth.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -85,15 +94,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Aviator"
-          height="175"
-          src="img/aviator.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/aviator.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -110,15 +122,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="We need to talk about Kevin"
-          height="175"
-          src="img/we-need-to-talk-about-kevin.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/we-need-to-talk-about-kevin.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -135,15 +150,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="What We Do in the Shadows"
-          height="175"
-          src="img/what-we-do-in-the-shadows.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/what-we-do-in-the-shadows.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -160,15 +178,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Revenant"
-          height="175"
-          src="img/revenant.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/revenant.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -185,15 +206,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Johnny English"
-          height="175"
-          src="img/johnny-english.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/johnny-english.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -210,15 +234,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Shutter Island"
-          height="175"
-          src="img/shutter-island.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/shutter-island.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -235,15 +262,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Pulp Fiction"
-          height="175"
-          src="img/pulp-fiction.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/pulp-fiction.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -260,15 +290,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="No Country for Old Men"
-          height="175"
-          src="img/no-country-for-old-men.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/no-country-for-old-men.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
@@ -285,15 +318,18 @@ exports[`MoviesList renders correctly 1`] = `
     <article
       className="small-movie-card catalog__movies-card"
       onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="small-movie-card__image"
       >
-        <img
-          alt="Snatch"
-          height="175"
-          src="img/snatch.jpg"
-          width="280"
+        <video
+          height={175}
+          muted={true}
+          poster="img/snatch.jpg"
+          src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+          width={280}
         />
       </div>
       <h3
