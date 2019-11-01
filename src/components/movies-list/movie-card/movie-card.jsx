@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { string, func } from "prop-types";
 import cx from "classnames";
 
-const MovieCard = ({ className, title, imageSrc, onClick }) => {
+import VideoPlayer from "../../video-player/video-player";
+
+const MovieCard = ({ className, title, poster, trailer, onClick }) => {
+  const [isPlaying, setPlaying] = useState(false);
+
+  let timerId;
+
+  useEffect(() => {
+    return () => clearTimeout(timerId);
+  }, []);
+
+  const handleMouseEnter = () => {
+    timerId = setTimeout(() => {
+      setPlaying(true);
+    }, 1000);
+  };
+
+  const handleMouseLeave = () => {
+    clearTimeout(timerId);
+    setPlaying(false);
+  };
+
   return (
-    <article className={cx(`small-movie-card`, className)} onClick={onClick}>
+    <article
+      className={cx(`small-movie-card`, className)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={onClick}
+    >
       <div className="small-movie-card__image">
-        <img src={imageSrc} alt={title} width="280" height="175" />
+        <VideoPlayer
+          width={280}
+          height={175}
+          src={trailer}
+          poster={poster}
+          isPlaying={isPlaying}
+        />
       </div>
       <h3 className="small-movie-card__title">
         <a className="small-movie-card__link" href="movie-page.html">
@@ -20,7 +52,8 @@ const MovieCard = ({ className, title, imageSrc, onClick }) => {
 MovieCard.propTypes = {
   className: string,
   title: string.isRequired,
-  imageSrc: string.isRequired,
+  poster: string.isRequired,
+  trailer: string.isRequired,
   onClick: func
 };
 
