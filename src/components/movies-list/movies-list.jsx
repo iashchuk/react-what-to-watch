@@ -6,18 +6,16 @@ import MovieCard from "./movie-card/movie-card";
 const MoviesList = ({ movies }) => {
   return (
     <div className="catalog__movies-list">
-      <div className="catalog__movies-list">
-        {movies.map((item) => (
-          <MovieCard
-            key={item.id}
-            className="catalog__movies-card"
-            title={item.title}
-            poster={item.poster}
-            trailer={item.trailer}
-            onClick={(f) => f}
-          />
-        ))}
-      </div>
+      {movies.map((item) => (
+        <MovieCard
+          key={item.id}
+          className="catalog__movies-card"
+          title={item.title}
+          poster={item.poster}
+          trailer={item.trailer}
+          onClick={(f) => f}
+        />
+      ))}
     </div>
   );
 };
