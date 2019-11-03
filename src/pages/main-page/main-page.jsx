@@ -9,6 +9,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Poster from "../../components/poster/poster";
 
+
 const MainPage = () => {
   return (
     <>
