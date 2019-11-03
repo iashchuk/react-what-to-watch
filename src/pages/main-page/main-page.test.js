@@ -1,14 +1,15 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Context, options } from "../../app";
+import { Provider } from "react-redux";
+import { store } from "../../store/store";
 import MainPage from "./main-page.jsx";
 
 describe(`MainPage`, () => {
   it(`renders correctly`, () => {
     const dom = (
-      <Context.Provider value={options}>
+      <Provider store={store}>
         <MainPage />
-      </Context.Provider>
+      </Provider>
     );
     const component = renderer.create(dom);
     const tree = component.toJSON();
