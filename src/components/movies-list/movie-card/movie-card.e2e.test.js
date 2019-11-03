@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { mount } from "enzyme";
+import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import MovieCard from "./movie-card";
 
@@ -26,7 +26,7 @@ describe(`MovieCard`, () => {
       />
     );
 
-    const component = mount(dom);
+    const component = shallow(dom);
     expect(component.find(CARD_CLASSNAME)).toHaveLength(1);
 
     component.simulate(`click`);

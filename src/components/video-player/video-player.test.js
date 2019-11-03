@@ -16,7 +16,7 @@ describe(`VideoPlayer`, () => {
         width={280}
         height={175}
         poster={cardData.poster}
-        trailer={cardData.trailer}
+        src={cardData.trailer}
         isPlaying={true}
       />
     );
