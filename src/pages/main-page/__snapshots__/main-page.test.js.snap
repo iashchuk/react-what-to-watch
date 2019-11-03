@@ -367,16 +367,6 @@ Array [
       <div
         className="catalog__movies-list"
       />
-      <div
-        className="catalog__more"
-      >
-        <button
-          className="btn catalog__button"
-          type="button"
-        >
-          Show more
-        </button>
-      </div>
     </section>
     <footer
       className="page-footer"
