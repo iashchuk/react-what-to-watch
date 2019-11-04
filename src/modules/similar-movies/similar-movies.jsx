@@ -1,11 +1,15 @@
 import React, { useEffect } from "react";
-import { array, func } from "prop-types";
+import { useSelector, useDispatch } from "react-redux";
 
 import MoviesList from "../../components/movies-list/movies-list";
+import { fetchMoviesAsync } from "../../store/movies/actions";
 
-const SimilarMovies = ({ movies, fetchMoviesAsync }) => {
+const SimilarMovies = () => {
+  const movies = useSelector((state) => state.movies.list);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    fetchMoviesAsync();
+    dispatch(fetchMoviesAsync());
   }, []);
 
   return (
@@ -14,11 +18,6 @@ const SimilarMovies = ({ movies, fetchMoviesAsync }) => {
       <MoviesList movies={movies.slice(0, 4)} />
     </section>
   );
-};
-
-SimilarMovies.propTypes = {
-  movies: array.isRequired,
-  fetchMoviesAsync: func.isRequired
 };
 
 export default SimilarMovies;

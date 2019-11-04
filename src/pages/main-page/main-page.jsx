@@ -1,6 +1,6 @@
 import React from "react";
 
-import CatalogContainer from "../../modules/catalog/catalog-container";
+import Catalog from "../../modules/catalog/catalog";
 
 import SvgSprite from "../../components/svg-sprite/svg-sprite";
 import CardBackground from "../../components/card-background/card-background";
@@ -8,7 +8,6 @@ import CardManage from "../../components/card-manage/card-manage";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Poster from "../../components/poster/poster";
-
 
 const MainPage = () => {
   return (
@@ -26,7 +25,7 @@ const MainPage = () => {
         </div>
       </section>
       <div className="page-content">
-        <CatalogContainer />
+        <Catalog />
         <Footer />
       </div>
     </>
