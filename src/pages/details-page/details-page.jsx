@@ -1,6 +1,6 @@
 import React from "react";
 
-import SimilarMovies from "../../modules/similar-movies/similar-movies";
+import { SimilarMoviesContainer } from "../../modules/similar-movies/similar-movies-container";
 
 import SvgSprite from "../../components/svg-sprite/svg-sprite";
 import Header from "../../components/header/header";
@@ -33,7 +33,7 @@ const DetailsPage = () => {
       </section>
 
       <div className="page-content">
-        <SimilarMovies />
+        <SimilarMoviesContainer />
         <Footer />
       </div>
     </>

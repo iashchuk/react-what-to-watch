@@ -6,7 +6,7 @@ import { data } from "../../api/mocks";
 
 describe(`SimilarMovies`, () => {
   it(`renders correctly`, () => {
-    const dom = <SimilarMovies movies={data} fetchMoviesAsync={(f) => f} />;
+    const dom = <SimilarMovies movies={data} />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

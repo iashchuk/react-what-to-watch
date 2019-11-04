@@ -7,7 +7,7 @@ import { data } from "../../api/mocks";
 
 describe(`Catalog`, () => {
   it(`renders correctly`, () => {
-    const dom = <Catalog movies={data} fetchMoviesAsync={(f) => f} />;
+    const dom = <Catalog movies={data} />;
     const component = renderer.create(dom);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
