@@ -1,6 +1,6 @@
 import React from "react";
 
-import SimilarMoviesContainer from "../../modules/similar-movies/similar-movies-container";
+import { SimilarMoviesContainer } from "../../modules/similar-movies/similar-movies-container";
 
 import SvgSprite from "../../components/svg-sprite/svg-sprite";
 import Header from "../../components/header/header";

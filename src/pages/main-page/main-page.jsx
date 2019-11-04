@@ -1,6 +1,6 @@
 import React from "react";
 
-import CatalogContainer from "../../modules/catalog/catalog-container";
+import { CatalogContainer } from "../../modules/catalog/catalog-container";
 
 import SvgSprite from "../../components/svg-sprite/svg-sprite";
 import CardBackground from "../../components/card-background/card-background";

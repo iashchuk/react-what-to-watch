@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { array, func } from "prop-types";
-
+import { array } from "prop-types";
 import ShowMoreButton from "../../components/buttons/show-more-button/show-more-button";
 import MoviesFilter from "../../components/movies-filter/movies-filter";
 import MoviesList from "../../components/movies-list/movies-list";
 import { GenresMap } from "../../api/transform/transformMovies";
 
-const Catalog = ({ movies, fetchMoviesAsync }) => {
-  const [list, setList] = useState([]);
-  const [activeFilter, setActiveFilter] = useState(GenresMap.All);
+const DEFAULT_LIST_SIZE = 6;
+const ADDED_COUNT_TO_LIST = 4;
 
-  useEffect(() => {
-    fetchMoviesAsync();
-  }, []);
+const Catalog = ({ movies }) => {
+  const [list, setList] = useState([]);
+  const [listSize, setListSize] = useState(DEFAULT_LIST_SIZE);
+  const [activeFilter, setActiveFilter] = useState(GenresMap.All);
 
   useEffect(() => {
     const filtered =
@@ -25,20 +24,20 @@ const Catalog = ({ movies, fetchMoviesAsync }) => {
   return (
     <section className="catalog">
       <h2 className="catalog__title visually-hidden">Catalog</h2>
-
       <MoviesFilter activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
-      <MoviesList movies={list} />
+      <MoviesList movies={list.slice(0, listSize)} />
 
-      <div className="catalog__more">
-        <ShowMoreButton />
-      </div>
+      {list.length > listSize && (
+        <div className="catalog__more">
+          <ShowMoreButton onClick={() => setListSize(listSize + ADDED_COUNT_TO_LIST)} />
+        </div>
+      )}
     </section>
   );
 };
 
 Catalog.propTypes = {
-  movies: array.isRequired,
-  fetchMoviesAsync: func.isRequired
+  movies: array
 };
 
 export default Catalog;

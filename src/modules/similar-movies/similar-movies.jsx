@@ -1,24 +1,18 @@
-import React, { useEffect } from "react";
-import { array, func } from "prop-types";
-
+import React from "react";
+import { array } from "prop-types";
 import MoviesList from "../../components/movies-list/movies-list";
 
-const SimilarMovies = ({ movies, fetchMoviesAsync }) => {
-  useEffect(() => {
-    fetchMoviesAsync();
-  }, []);
-
+const SimilarMovies = ({ movies }) => {
   return (
     <section className="catalog catalog--like-this">
       <h2 className="catalog__title">More like this</h2>
-      <MoviesList movies={movies.slice(0, 4)} />
+      <MoviesList movies={movies} />
     </section>
   );
 };
 
 SimilarMovies.propTypes = {
-  movies: array.isRequired,
-  fetchMoviesAsync: func.isRequired
+  movies: array
 };
 
 export default SimilarMovies;
