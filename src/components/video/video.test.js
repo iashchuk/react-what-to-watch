@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import VideoPlayer from "./video-player";
+import Video from "./video";
 
 const cardData = {
   id: 1,
@@ -9,10 +9,10 @@ const cardData = {
   trailer: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`
 };
 
-describe(`VideoPlayer`, () => {
+describe(`Video`, () => {
   it(`render correctly`, () => {
     const dom = (
-      <VideoPlayer
+      <Video
         width={280}
         height={175}
         poster={cardData.poster}

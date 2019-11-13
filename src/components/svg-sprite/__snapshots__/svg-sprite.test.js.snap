@@ -8,6 +8,17 @@ exports[`SvgSprite renders correctly 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <symbol
+      id="play-s"
+      viewBox="0 0 19 19"
+    >
+      <path
+        clipRule="evenodd"
+        d="M0 0L19 9.5L0 19V0Z"
+        fill="#EEE5B5"
+        fillRule="evenodd"
+      />
+    </symbol>
+    <symbol
       id="add"
       viewBox="0 0 19 20"
     >
