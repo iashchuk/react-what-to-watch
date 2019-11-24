@@ -1,9 +1,9 @@
-import axios from "axios";
+import fetch from "./fetch-config";
 
 export const api = {
   movies: {
     fetch() {
-      return axios.get(`https://htmlacademy-react-2.appspot.com/wtw/films`);
+      return fetch.get(`/films`);
     }
   }
 };
