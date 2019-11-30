@@ -1,17 +1,18 @@
-import React from "react";
-import MainPage from "./pages/main-page/main-page";
-import DetailsPage from "./pages/details-page/details-page";
-import SignInPage from "./pages/sign-in-page/sign-in-page";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Public } from "./navigation/public";
+import { Private } from "./navigation/private";
+import { checkLoginAsync } from "./store/auth/actions";
 
 const App = () => {
-  switch (location.pathname) {
-    case `/details`:
-      return <DetailsPage />;
-    case `/auth`:
-      return <SignInPage />;
-    default:
-      return <MainPage />;
-  }
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkLoginAsync());
+  }, []);
+
+  return isAuthenticated ? <Private /> : <Public />;
 };
 
 export default App;
