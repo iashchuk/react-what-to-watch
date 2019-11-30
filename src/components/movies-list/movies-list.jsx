@@ -10,6 +10,7 @@ const MoviesList = ({ movies }) => {
         <MovieCard
           key={item.id}
           className="catalog__movies-card"
+          id={item.id}
           title={item.name}
           poster={item.previewImage}
           trailer={item.previewVideo}
@@ -24,8 +25,8 @@ MoviesList.propTypes = {
   movies: arrayOf(
       shape({
         name: string.isRequired,
-        poster: string.isRequired,
-        trailer: string.isRequired
+        previewImage: string.isRequired,
+        previewVideo: string.isRequired
       })
   )
 };

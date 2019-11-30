@@ -12,7 +12,7 @@ const TabsItems = {
   REVIEWS: `reviews`
 };
 
-const Tabs = () => {
+const Tabs = ({ movie }) => {
   const [current, setCurrent] = useState(TabsItems.OVERVIEW);
 
   const handleTabClick = (evt, tab) => {
@@ -23,10 +23,26 @@ const Tabs = () => {
   const getContent = (name) => {
     switch (name) {
       case TabsItems.OVERVIEW:
-        return <Overview />;
+        return (
+          <Overview
+            description={movie.description}
+            director={movie.director}
+            starring={movie.starring}
+            rating={movie.rating}
+            scores={movie.scores}
+          />
+        );
 
       case TabsItems.DETAILS:
-        return <Details />;
+        return (
+          <Details
+            director={movie.director}
+            starring={movie.starring}
+            released={movie.released}
+            genre={movie.genre}
+            runtime={movie.runtime}
+          />
+        );
 
       case TabsItems.REVIEWS:
         return <Reviews />;
