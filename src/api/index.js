@@ -23,5 +23,11 @@ export const api = {
     create(id, comment) {
       return fetch.post(`/comments/${id}`, comment);
     }
+  },
+
+  promo: {
+    fetch() {
+      return fetch.get(`/films/promo`);
+    }
   }
 };
