@@ -20,8 +20,14 @@ export const api = {
     fetch(id) {
       return fetch.get(`/comments/${id}`);
     },
-    create(id, comment) {
-      return fetch.post(`/comments/${id}`, comment);
+    create(id, review) {
+      return fetch.post(`/comments/${id}`, review);
+    }
+  },
+
+  promo: {
+    fetch() {
+      return fetch.get(`/films/promo`);
     }
   }
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useRouteMatch } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
 
 import { SimilarMoviesContainer } from "../../modules/similar-movies/similar-movies-container";
 
@@ -13,26 +13,31 @@ import Tabs from "../../components/tabs/tabs";
 import CardManage from "../../components/card-manage/card-manage";
 import VideoPlayer from "../../components/video-player-full/video-player";
 import { fetchMovieAsync, resetMovie } from "../../store/movie/actions";
+import Loading from "../../components/loading/loading";
 
 const DetailsPage = () => {
   const [isFull, setFull] = useState(false);
   const movie = useSelector((state) => state.movie);
   const dispatch = useDispatch();
+  const history = useHistory();
   const match = useRouteMatch();
+  const id = match.params.id;
 
   useEffect(() => {
-    const id = match.params.id;
     dispatch(fetchMovieAsync(id));
-
     return () => dispatch(resetMovie());
-  }, []);
+  }, [id]);
+
+  if (!movie.id) {
+    return <Loading />;
+  }
 
   return (
     <>
       {isFull && (
         <VideoPlayer
-          name="Transpotting"
-          poster={`img/fantastic-beasts-the-crimes-of-grindelwald.jpg`}
+          name={movie.name}
+          poster={movie.previewImage}
           src={movie.trailer}
           onClose={() => setFull(false)}
         />
@@ -41,15 +46,18 @@ const DetailsPage = () => {
       <SvgSprite />
       <section className="movie-card movie-card--full">
         <div className="movie-card__hero">
-          <CardBackground />
           <Header />
           <div className="movie-card__wrap">
-            <CardManage
-              name={movie.name}
-              genre={movie.genre}
-              released={movie.released}
-              onPlayClick={() => setFull(true)}
-            />
+            <CardBackground src={movie.backgroundImage} />
+            <div className="movie-card__info">
+              <CardManage
+                name={movie.name}
+                genre={movie.genre}
+                released={movie.released}
+                onPlayClick={() => setFull(true)}
+                onAddReviewClick={() => history.push(`/movies/${id}/review`)}
+              />
+            </div>
           </div>
         </div>
 
