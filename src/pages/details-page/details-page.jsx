@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useRouteMatch } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
 
 import { SimilarMoviesContainer } from "../../modules/similar-movies/similar-movies-container";
 
@@ -13,19 +13,24 @@ import Tabs from "../../components/tabs/tabs";
 import CardManage from "../../components/card-manage/card-manage";
 import VideoPlayer from "../../components/video-player-full/video-player";
 import { fetchMovieAsync, resetMovie } from "../../store/movie/actions";
+import Loading from "../../components/loading/loading";
 
 const DetailsPage = () => {
   const [isFull, setFull] = useState(false);
   const movie = useSelector((state) => state.movie);
   const dispatch = useDispatch();
+  const history = useHistory();
   const match = useRouteMatch();
+  const id = match.params.id;
 
   useEffect(() => {
-    const id = match.params.id;
     dispatch(fetchMovieAsync(id));
-
     return () => dispatch(resetMovie());
-  }, []);
+  }, [id]);
+
+  if (!movie.id) {
+    return <Loading />;
+  }
 
   return (
     <>
@@ -50,6 +55,7 @@ const DetailsPage = () => {
                 genre={movie.genre}
                 released={movie.released}
                 onPlayClick={() => setFull(true)}
+                onAddReviewClick={() => history.push(`/movies/${id}/review`)}
               />
             </div>
           </div>

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { CatalogContainer } from "../../modules/catalog/catalog-container";
 
 import SvgSprite from "../../components/svg-sprite/svg-sprite";
