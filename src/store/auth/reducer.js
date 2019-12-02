@@ -1,7 +1,7 @@
 import * as types from "./types";
 
 const initialState = {
-  user: {},
+  user: null,
   isAuthenticated: false
 };
 
@@ -21,8 +21,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
 
     case types.LOGOUT:
       return {
-        ...state,
-        isAuthenticated: false
+        ...initialState
       };
 
     default:
