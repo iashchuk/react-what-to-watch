@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { string, func } from "prop-types";
+import React, { useRef, useState, useEffect } from "react";
+import { number, string, func } from "prop-types";
 import { Link } from "react-router-dom";
 import cx from "classnames";
 
@@ -7,21 +7,22 @@ import VideoPlayer from "../../video/video";
 
 const MovieCard = ({ className, id, title, poster, trailer, onClick }) => {
   const [isPlaying, setPlaying] = useState(false);
-
-  let timerId;
+  const timerId = useRef(null);
 
   useEffect(() => {
-    return () => clearTimeout(timerId);
+    return () => clearTimeout(timerId.current);
   }, []);
 
   const handleMouseEnter = () => {
-    timerId = setTimeout(() => {
+    const mouseTimerId = setTimeout(() => {
       setPlaying(true);
     }, 1000);
+
+    timerId.current = mouseTimerId;
   };
 
   const handleMouseLeave = () => {
-    clearTimeout(timerId);
+    clearTimeout(timerId.current);
     setPlaying(false);
   };
 
@@ -56,6 +57,7 @@ const MovieCard = ({ className, id, title, poster, trailer, onClick }) => {
 
 MovieCard.propTypes = {
   className: string,
+  id: number.isRequired,
   title: string.isRequired,
   poster: string.isRequired,
   trailer: string.isRequired,
