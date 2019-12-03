@@ -1,8 +1,9 @@
 import * as types from "./types";
 
 const initialState = {
-  user: {},
-  isAuthenticated: false
+  user: null,
+  isAuthenticated: false,
+  error: null
 };
 
 export const authReducer = (state = initialState, { type, payload }) => {
@@ -21,9 +22,15 @@ export const authReducer = (state = initialState, { type, payload }) => {
 
     case types.LOGOUT:
       return {
-        ...state,
-        isAuthenticated: false
+        ...initialState
       };
+
+    case types.EMIT_AUTH_ERROR: {
+      return {
+        ...state,
+        error: payload
+      };
+    }
 
     default:
       return state;
