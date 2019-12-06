@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import PlayButton from "../buttons/play-button/play-button";
 import PlusButton from "../buttons/plus-button/plus-button";
 import Button from "../../components/buttons/button";
@@ -12,6 +14,16 @@ const CardManage = ({
   onAddListClick,
   onAddReviewClick
 }) => {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const history = useHistory();
+
+  const handleAddToFavorite = () => {
+    if (isAuthenticated) {
+      onAddListClick();
+    } else {
+      history.push(`/auth`);
+    }
+  };
   return (
     <div className="movie-card__desc">
       <h2 className="movie-card__title">{name}</h2>
@@ -24,7 +36,7 @@ const CardManage = ({
         <PlusButton
           className="movie-card__button"
           isFavorite={isFavorite}
-          onClick={onAddListClick}
+          onClick={handleAddToFavorite}
         />
         <Button className="movie-card__button" onClick={onAddReviewClick}>
           Add review
