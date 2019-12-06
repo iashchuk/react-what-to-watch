@@ -1,9 +1,10 @@
 import * as types from "./types";
+import * as typesMovies from "../movies/types";
 
 const initialState = {
   comments: [],
   review: null,
-  error: null
+  movieError: null
 };
 
 export const movieReducer = (state = initialState, { type, payload }) => {
@@ -25,10 +26,22 @@ export const movieReducer = (state = initialState, { type, payload }) => {
         ...initialState
       };
 
+    case typesMovies.ADD_MOVIE_TO_LIST:
+      return {
+        ...state,
+        isFavorite: payload.id === state.id
+      };
+
+    case typesMovies.REMOVE_MOVIE_FROM_LIST:
+      return {
+        ...state,
+        isFavorite: payload.id === state.id
+      };
+
     case types.EMIT_MOVIE_ERROR: {
       return {
         ...state,
-        error: payload
+        movieError: payload
       };
     }
 
