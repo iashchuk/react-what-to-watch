@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { string, node, func } from "prop-types";
 import cx from "classnames";
 
 const Popup = ({ className, title, children, onConfirm }) => {
@@ -34,6 +35,13 @@ const Popup = ({ className, title, children, onConfirm }) => {
       </div>
     </div>
   );
+};
+
+Popup.propTypes = {
+  className: string,
+  title: string,
+  children: node,
+  onConfirm: func
 };
 
 export default Popup;

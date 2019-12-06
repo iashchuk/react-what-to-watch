@@ -1,4 +1,5 @@
 import React from "react";
+import { string } from "prop-types";
 import { useSelector } from "react-redux";
 import { Link, useRouteMatch } from "react-router-dom";
 
@@ -45,6 +46,11 @@ const Header = ({ className, pageTitle }) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  className: string,
+  pageTitle: string
 };
 
 export default Header;

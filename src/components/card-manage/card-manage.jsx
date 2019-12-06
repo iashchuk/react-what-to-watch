@@ -1,4 +1,5 @@
 import React from "react";
+import { string, number, bool, func } from "prop-types";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import PlayButton from "../buttons/play-button/play-button";
@@ -44,6 +45,16 @@ const CardManage = ({
       </div>
     </div>
   );
+};
+
+CardManage.propTypes = {
+  name: string,
+  genre: string,
+  released: number,
+  isFavorite: bool,
+  onPlayClick: func,
+  onAddListClick: func,
+  onAddReviewClick: func
 };
 
 export default CardManage;

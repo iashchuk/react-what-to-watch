@@ -1,4 +1,5 @@
 import React from "react";
+import { string, number, array } from "prop-types";
 import { getMovieLevel } from "../../../helpers/getMovieLevel";
 
 const Overview = ({ description, director, starring, rating, scores }) => {
@@ -28,6 +29,14 @@ const Overview = ({ description, director, starring, rating, scores }) => {
       </div>
     </>
   );
+};
+
+Overview.propTypes = {
+  description: string,
+  director: string,
+  starring: array,
+  rating: number,
+  scores: number
 };
 
 export default Overview;

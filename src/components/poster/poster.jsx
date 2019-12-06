@@ -1,5 +1,5 @@
 import React from "react";
-import { bool } from "prop-types";
+import { string, bool } from "prop-types";
 
 import cx from "classnames";
 
@@ -23,7 +23,8 @@ Poster.defaultProps = {
 };
 
 Poster.propTypes = {
-  big: bool
+  big: bool,
+  src: string
 };
 
 export default Poster;

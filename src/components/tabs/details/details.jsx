@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
+import { string, number, array } from "prop-types";
 import { formatRunTime } from "../../../helpers/formatVideoTime";
 
-const Details = ({ director, starring, released, genre, runtime }) => {
+const Details = ({ director, starring, genre, runtime }) => {
   const time = formatRunTime(runtime);
   const actors =
     starring &&
@@ -46,6 +47,13 @@ const Details = ({ director, starring, released, genre, runtime }) => {
       </div>
     </div>
   );
+};
+
+Details.propTypes = {
+  director: string,
+  starring: array,
+  genre: string,
+  runtime: number
 };
 
 export default Details;

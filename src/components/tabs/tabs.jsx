@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { object } from "prop-types";
 import cx from "classnames";
 
 import Details from "./details/details";
@@ -77,6 +78,10 @@ const Tabs = ({ movie }) => {
       {getContent(current)}
     </div>
   );
+};
+
+Tabs.propTypes = {
+  movie: object
 };
 
 export default Tabs;

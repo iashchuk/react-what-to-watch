@@ -1,4 +1,5 @@
 import React from "react";
+import { string } from "prop-types";
 
 const CardBackground = ({ src }) => {
   return (
@@ -6,6 +7,10 @@ const CardBackground = ({ src }) => {
       <img src={src} />
     </div>
   );
+};
+
+CardBackground.propTypes = {
+  src: string
 };
 
 export default CardBackground;
